@@ -1,0 +1,433 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+ul li {
+    list-style: none;
+
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+nav {
+    background-color: rgb(17, 16, 16);
+    height: 75px;
+}
+
+ul li a:hover {
+    border-bottom: 2px solid rgb(221, 98, 32);
+    transition: 0.4s;
+
+}
+
+h2 {
+    letter-spacing: 1px;
+    position: absolute;
+    right: 250px;
+    top: 250px;
+    border-radius: 35px;
+    padding: 10px;
+    box-shadow: 2px 4px 3px;
+}
+
+.tale {
+    background-image: url(https://getwallpapers.com/wallpaper/full/7/b/0/845233-hiking-wallpapers-2048x1213-4k.jpg);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 1px 3px 2px orangered;
+}
+
+span {
+    margin-left: 10px;
+    font-size: 100px;
+}
+
+#feat {
+    font-size: 75px;
+    font-weight: bolder;
+}
+/* From Uiverse.io by Admin12121 */ 
+.body {
+    --radius: 8px;
+    --border: 4px;
+    --height: 48px;
+    --speed: 0.25s;
+    display: grid;
+    place-items: center;
+    align-content: center;
+    font-family: "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue",
+      Helvetica, Arial, sans-serif, system-ui;
+  }
+  
+  .tabs {
+    height: var(--height);
+    display: grid;
+    grid-auto-flow: column;
+    background: hsl(0 0% 0%);
+    border-radius: var(--radius);
+    grid-auto-columns: 1fr;
+    position: relative;
+    border: var(--border) solid hsl(0 0% 0%);
+  }
+  
+  .tabs {
+    --ease: linear(
+      0,
+      0.1641 3.52%,
+      0.311 7.18%,
+      0.4413 10.99%,
+      0.5553 14.96%,
+      0.6539 19.12%,
+      0.738 23.5%,
+      0.8086 28.15%,
+      0.8662 33.12%,
+      0.9078 37.92%,
+      0.9405 43.12%,
+      0.965 48.84%,
+      0.9821 55.28%,
+      0.992 61.97%,
+      0.9976 70.09%,
+      1
+    );
+  }
+  
+  .tabs > .input,
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+  
+  .tabs:has(:checked:nth-of-type(1)) {
+    --active: 0;
+  }
+  .tabs:has(:checked:nth-of-type(2)) {
+    --active: 1;
+  }
+  .tabs:has(:checked:nth-of-type(3)) {
+    --active: 2;
+  }
+  .tabs:has(:checked:nth-of-type(4)) {
+    --active: 3;
+  }
+  
+  .tabs :checked + .label {
+    --highlight: 1;
+  }
+  
+  .tabs:has(.input:nth-of-type(2)) {
+    --count: 2;
+  }
+  .tabs:has(.input:nth-of-type(3)) {
+    --count: 3;
+  }
+  .tabs:has(.input:nth-of-type(4)) {
+    --count: 4;
+  }
+  
+  .tabs .label {
+    padding: 0 clamp(10px, 10px + 10px, 20px);
+    cursor: pointer;
+    text-align: center;
+    height: 100%;
+    display: grid;
+    border-radius: calc(var(--radius) - var(--border));
+    place-items: center;
+    color: hsl(0 0% 100% / calc(0.5 + var(--highlight, 0)));
+    transition: background, color;
+    transition-duration: 0.25s;
+    transition-timing-function: var(--ease, ease);
+  }
+  
+  .input:not(:checked) + .label:hover {
+    --highlight: 0.35;
+    background: hsl(0 0% 20%);
+  }
+  
+  .tabs::after {
+    pointer-events: none;
+    content: "";
+    width: calc(100% / var(--count));
+    height: 100%;
+    background: hsl(0 0% 100%);
+    position: absolute;
+    border-radius: calc(var(--radius) - var(--border));
+    mix-blend-mode: difference;
+    translate: calc(var(--active, 0) * 100%) 0;
+    transition: translate, outline-color;
+    transition-duration: var(--speed);
+    transition-timing-function: var(--ease, ease);
+    outline: 2px solid transparent;
+  }
+  
+  .tabs:has(:focus-visible)::after {
+    outline-color: red;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: grey;
+    font-size: 22px;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }  
+  /* From Uiverse.io by WhiteNervosa */ 
+.customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: #2c2c2c;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #2d6737;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #34723f;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+.container{
+  max-width: 90%;
+  margin: 20px auto;
+}
+.container .imgcontainer{
+  columns:2 300px;
+  gap: 15px;
+}
+.container .imgcontainer img{
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 100%;
+
+}
+/* From Uiverse.io by Yaya12085 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title {
+  font-size: 28px;
+  color: orangered;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title::before,.title::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: royalblue;
+}
+
+.title::before {
+  width: 18px;
+  height: 18px;
+  background-color: royalblue;
+}
+
+.title::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin {
+  text-align: center;
+}
+
+.signin a {
+  color: royalblue;
+}
+
+.signin a:hover {
+  text-decoration: underline royalblue;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.form label {
+  position: relative;
+}
+
+.form label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form label .input:focus + span,.form label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form label .input:valid + span {
+  color: green;
+}
+
+.submit {
+  border: none;
+  outline: none;
+  background-color: orangered;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit:hover {
+  background-color: rgb(56, 90, 194);
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
